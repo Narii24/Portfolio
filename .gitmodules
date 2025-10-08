@@ -1,0 +1,3 @@
+[submodule "Desktop/food-del/frontend"]
+	path = Desktop/food-del/frontend
+	url = https://github.com/Narii24/Food-del.git
