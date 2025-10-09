@@ -1,0 +1,148 @@
+/* src/components/Qualification.css */
+
+.qualification-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.tab-button:hover {
+    color: #495057;
+}
+
+.tab-button.active {
+    color: #212529;
+    border-bottom: 3px solid #212529;
+}
+
+/* Timeline Structure */
+.qualification-content {
+    max-width: 650px;
+}
+
+.timeline-container {
+    position: relative;
+}
+
+/* Central vertical line using a pseudo-element */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #dee2e6;
+}
+
+.timeline-item-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+/* Timeline Content */
+.timeline-item-wrapper .timeline-content {
+    padding: 0 1.5rem;
+    width: 50%;
+    position: relative;
+}
+
+/* Dot using a pseudo-element on the content */
+.timeline-item-wrapper .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0.25rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #343a40;
+    z-index: 10;
+    border: 2px solid white; /* Border color to match background break */
+}
+
+.align-left .timeline-content {
+    text-align: right;
+    margin-left: 0;
+}
+
+.align-right .timeline-content {
+    text-align: left;
+    margin-left: 50%;
+}
+
+.align-left .timeline-content::before {
+    right: -6px; /* Position dot on the central line */
+}
+
+.align-right .timeline-content::before {
+    left: -6px; /* Position dot on the central line */
+}
+
+/* Content Text Styling */
+.timeline-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.timeline-place {
+    font-size: 0.9rem;
+    color: #495057;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-year {
+    font-size: 0.8rem;
+    color: #6c757d;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.calendar-icon {
+    font-size: 0.8rem;
+}
+
+/* Mobile Fallback: Stacked timeline */
+@media (max-width: 600px) {
+    .timeline-container::before {
+        left: 1rem; /* Move line to the left */
+        transform: none;
+    }
+    
+    .timeline-item-wrapper,
+    .timeline-item-wrapper .timeline-content {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .timeline-item-wrapper .timeline-content::before {
+        left: 0.7rem; /* Dot position matches new line position */
+    }
+
+    .align-left .timeline-content,
+    .align-right .timeline-content {
+        text-align: left;
+        margin-left: 0;
+        padding-left: 2.5rem; /* Add padding to clear the line/dot */
+    }
+}

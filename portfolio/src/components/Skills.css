@@ -1,0 +1,65 @@
+/* src/components/Skills.css */
+.skills {
+    background-color: #f8f9fa;
+}
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 800px;
+}
+
+@media (min-width: 768px) {
+    .skills-content {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.skill-card {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f1f3f5;
+    width: 100%;
+    max-width: 400px;
+}
+
+.skill-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #212529;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.skill-check-icon {
+    font-size: 0.85rem;
+    color: #343a40;
+    flex-shrink: 0;
+}
+
+.skill-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.skill-level {
+    font-size: 0.75rem;
+    color: #6c757d;
+}
