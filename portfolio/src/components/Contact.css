@@ -1,0 +1,213 @@
+/* src/components/Contact.css */
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 960px;
+    margin: 0 auto; /* Center content within the container */
+}
+
+/* Contact Cards and Form Layout */
+@media (min-width: 1024px) {
+    .contact-content {
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: space-between;
+    }
+
+    .contact-info {
+        width: 35%;
+    }
+
+    .contact-form-wrapper {
+        width: 65%;
+    }
+}
+
+.contact-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .contact-heading {
+        text-align: left;
+    }
+    .contact-form-wrapper .contact-heading {
+        text-align: left;
+    }
+}
+
+/* --- Contact Cards (Talk to me) --- */
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f1f3f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contact-icon {
+    font-size: 1.75rem;
+    color: #343a40;
+    margin-bottom: 0.75rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.card-value {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.75rem;
+}
+
+.card-button {
+    font-size: 0.8rem;
+    color: #343a40;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.card-button:hover {
+    text-decoration: underline;
+    color: #212529;
+}
+
+/* --- Contact Form (Write me your project) --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f3f5;
+}
+
+.input-field-wrapper {
+    position: relative;
+}
+
+.input-label {
+    position: absolute;
+    top: -10px;
+    left: 1rem;
+    background-color: #f8f9fa; /* Match form background */
+    padding: 0 0.5rem;
+    font-size: 0.875rem;
+    color: #495057;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.input-control {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    color: #212529;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-control:focus {
+    border-color: #212529;
+    box-shadow: 0 0 0 1px #212529;
+}
+
+.textarea-control {
+    resize: none;
+}
+
+.submit-button {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+
+/* --- Footer Section Styles --- */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem; 
+    padding-bottom: 2rem;
+    border-top: 1px solid #e9ecef;
+    margin-top: 4rem;
+}
+
+.footer-logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-links a {
+    color: #6c757d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #212529;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.footer-socials .social-icon {
+    font-size: 1.5rem;
+    color: #6c757d;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials .social-icon:hover {
+    color: #343a40;
+    transform: translateY(-2px);
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    color: #adb5bd;
+}
